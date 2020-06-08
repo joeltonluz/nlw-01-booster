@@ -1,6 +1,5 @@
 import { Request, Response } from 'express';
 import knex from '../database/connection';
-import ItemsController from './ItemsController';
 
 class PointsController {
   async index (req: Request, res: Response) {
@@ -20,6 +19,7 @@ class PointsController {
 
     return res.json(points);
   };
+
   async show (req: Request, res: Response) {
     const { id } = req.params;
 
